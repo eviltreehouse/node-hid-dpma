@@ -13,7 +13,7 @@
   },
   "scripts": {
     "install-hidapi": "git submodule update --init",
-    "install": "node-gyp configure rebuild"
+    "rebuild": "npm install-hidapi && node-gyp configure rebuild"
   },
   "bin": {
     "hid-showdevices": "./src/show-devices.js"
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "nan": "^2.6.2",
-    "prebuild": "^6.2.1",
     "rimraf": "^2.5.3"
   },
   "gypfile": true
