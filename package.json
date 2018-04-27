@@ -1,7 +1,7 @@
 {
   "name": "node-hid-dpma",
   "description": "DPMA Support for node-hid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Corey Sharrah",
     "email": "corey@eviltreehouse.com",
