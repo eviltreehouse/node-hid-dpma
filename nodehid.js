@@ -10,6 +10,8 @@ function HID() {
     //Inherit from EventEmitter
     EventEmitter.call(this);
 
+    if (! binding) return;
+
     /* We also want to inherit from `binding.HID`, but unfortunately,
         it's not so easy for native Objects. For example, the
         following won't work since `new` keyword isn't used:
@@ -100,5 +102,5 @@ HID.prototype.resume = function resume() {
 };
 
 //Expose API
-exports.HID = HID;
+exports.HID = binding ? HID : null;
 exports.devices = binding.devices;

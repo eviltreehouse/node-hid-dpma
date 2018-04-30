@@ -13,7 +13,7 @@
   },
   "scripts": {
     "install-hidapi": "git submodule update --init",
-    "rebuild": "npm install-hidapi && node-gyp configure rebuild"
+    "rebuild": "npm run install-hidapi && node-gyp configure rebuild"
   },
   "bin": {
     "hid-showdevices": "./src/show-devices.js"
