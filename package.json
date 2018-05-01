@@ -1,7 +1,7 @@
 {
   "name": "node-hid-dpma",
   "description": "DPMA Support for node-hid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Corey Sharrah",
     "email": "corey@eviltreehouse.com",
@@ -12,8 +12,7 @@
     "url": "git://github.com/eviltreehouse/node-hid-dpma.git"
   },
   "scripts": {
-    "install-hidapi": "git submodule update --init",
-    "rebuild": "npm run install-hidapi && node-gyp configure rebuild"
+    "rebuild": "node-gyp configure rebuild"
   },
   "bin": {
     "hid-showdevices": "./src/show-devices.js"
