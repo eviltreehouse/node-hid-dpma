@@ -23,10 +23,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "node-dpma": "eviltreehouse/node-dpma"
+    "node-dpma": "eviltreehouse/node-dpma",
+    "nan": "^2.6.2"
   },
   "devDependencies": {
-    "nan": "^2.6.2",
     "rimraf": "^2.5.3"
   },
   "gypfile": true
