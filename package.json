@@ -1,7 +1,7 @@
 {
   "name": "node-hid-dpma",
-  "description": "DPMA Support for node-hid",
-  "version": "1.0.4",
+  "description": "Fork of node-hid that supports DPMA 1.1",
+  "version": "1.1.0",
   "author": {
     "name": "Corey Sharrah",
     "email": "corey@eviltreehouse.com",
@@ -12,7 +12,10 @@
     "url": "git://github.com/eviltreehouse/node-hid-dpma.git"
   },
   "scripts": {
-    "rebuild": "node-gyp configure rebuild"
+    "start": "node demo.js",
+    "install": "npm run rebuild",
+    "rebuild": "node-gyp configure rebuild",
+    "clean": "node-gyp clean"
   },
   "bin": {
     "hid-showdevices": "./src/show-devices.js"
@@ -23,7 +26,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "node-dpma": "eviltreehouse/node-dpma",
     "nan": "^2.6.2"
   },
   "devDependencies": {

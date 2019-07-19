@@ -1,9 +1,11 @@
+const path = require('path');
+
 var EventEmitter = require("events").EventEmitter,
     util = require("util");
 
-//Load C++ binding
-// var binding = require('bindings')('HID.node');
-var binding = require('node-dpma')('HID', './build/Release', 'node-hid-dpma');
+
+// We will populate this externally:
+var binding = null;
 
 //This class is a wrapper for `binding.HID` class
 function HID() {
@@ -102,5 +104,6 @@ HID.prototype.resume = function resume() {
 };
 
 //Expose API
-exports.HID = binding ? HID : null;
-exports.devices = binding.devices;
+exports.setNativeBinding = (o) => { binding = o; return exports; }
+exports.HID = HID;
+exports.devices = () => { return binding ? binding.devices() : null };
